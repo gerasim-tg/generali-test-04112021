@@ -21,7 +21,18 @@ class ModifyInputData():
         # print(f'new date {days} days from today: {new_date}')
         return new_date
 
+    ##
+    #  1. a python script that updates xml test data file in-place
+    ##
     def update_fields_xml(self, x: int, y: int, input_xml_file):
+        """ this method to update given DEPART and RETURN fields with the new dates
+            the result is saved into the same file <input_xml_file>
+
+        :param x:
+        :param y:
+        :param input_xml_file:
+        :return:
+        """
         # update DEPART and RETURN fields
 
         new_depart_date = self.future_date(x)
@@ -45,7 +56,18 @@ class ModifyInputData():
         except Exception as e:
             print(f'Exception trying to write to a file {xml_test_file}, {e}')
 
+    ##
+    #  2. a python script that updates json test data and saves it into a new file
+    ##
     def remove_element_json(self, el: str, input_json_file, modified_json_file):
+        """ this method removes a field <el> from json file and saves the
+            result in a new <modified_json_file>
+
+        :param el:
+        :param input_json_file:
+        :param modified_json_file:
+        :return:
+        """
         self.fdict = {}
 
         with open(input_json_file) as f:
@@ -75,7 +97,6 @@ class ModifyInputData():
 ##
 #  3. Create a python script that parses jmeter log files
 ##
-
 class AssertionResult(namedtuple('AssertionResult', (
         'label', 'responseCode', 'responseMessage', 'failureMessage', 'timeStamp'
 ))):
