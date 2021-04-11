@@ -1,0 +1,5 @@
+AssertionResult( label=Direct_test_Services_QuoteRequest  responseCode=504     responseMessage=Gateway Time-out    failureMessage=      timeStamp=02/09/2021 06:01:23 PST )
+AssertionResult( label=Internal_Quote_Travel              responseCode=504     responseMessage=Gateway Timeout     failureMessage=      timeStamp=02/09/2021 06:01:23 PST )
+AssertionResult( label=Proxy_test_Services_QuoteRequest   responseCode=504     responseMessage=Gateway Timeout     failureMessage=      timeStamp=02/09/2021 06:01:30 PST )
+AssertionResult( label=Proxy_test_Services_QuoteRequest   responseCode=504     responseMessage=Gateway Timeout     failureMessage=      timeStamp=02/09/2021 06:02:55 PST )
+AssertionResult( label=Internal_Quote_Travel              responseCode=504     responseMessage=Gateway Timeout     failureMessage=      timeStamp=02/09/2021 06:03:04 PST )
